@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mainIndex/index",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -14,11 +15,36 @@
     "pages/im/im",
     "pages/im/room/room"
   ],
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/main.png",
+        "iconPath": "images/main.png",
+        "pagePath": "pages/mainIndex/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/all.png",
+        "iconPath": "images/all.png",
+        "pagePath": "pages/index/index",
+        "text": "产品介绍"
+      },
+      {
+        "selectedIconPath": "images/about.png",
+        "iconPath": "images/about.png",
+        "pagePath": "pages/im/im",
+        "text": "关于我们"
+      }
+    ]
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "首页",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
