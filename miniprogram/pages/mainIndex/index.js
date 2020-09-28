@@ -1,50 +1,18 @@
-const order = ['demo1', 'demo2', 'demo3']
-
 Page({
-  onShareAppMessage() {
-    return {
-      title: 'scroll-view',
-      path: 'page/component/pages/scroll-view/scroll-view'
-    }
-  },
-
   data: {
-    toView: 'green'
   },
-
-  upper(e) {
-    console.log(e)
-  },
-
-  lower(e) {
-    console.log(e)
-  },
-
-  scroll(e) {
-    console.log(e)
-  },
-
-  scrollToTop() {
-    this.setAction({
-      scrollTop: 0
+  toURLa: function () {
+    wx.switchTab({
+      url: '/pages/im/im',
     })
   },
-
-  tap() {
-    for (let i = 0; i < order.length; ++i) {
-      if (order[i] === this.data.toView) {
-        this.setData({
-          toView: order[i + 1],
-          scrollTop: (i + 1) * 200
-        })
-        break
-      }
-    }
-  },
-
-  tapMove() {
-    this.setData({
-      scrollTop: this.data.scrollTop + 10
+  previewImage: function (e) {
+    var current = e.target.dataset.src;
+    var imgList = [];
+    imgList.push(e.target.dataset.src.toString());
+    wx.previewImage({
+      current: current,//当前点击的图片链接
+      urls: imgList//图片数组
     })
   }
 })

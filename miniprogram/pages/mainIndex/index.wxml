@@ -1,27 +1,32 @@
 <view class="container">
   <view class="page-body">
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>Vertical Scroll\n纵向滚动</text>
-      </view>
-      <view class="page-section-spacing">
-        <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-          <view id="demo1" class="scroll-view-item demo-text-1"></view>
-          <view id="demo2"  class="scroll-view-item demo-text-2"></view>
-          <view id="demo3" class="scroll-view-item demo-text-3"></view>
-        </scroll-view>
-      </view>
+    <view class="page-section-spacing">
+      <swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{false}}"
+              vertical="{{false}}" interval="2000" duration="500" previous-margin="0"
+              next-margin="0" style="height: 100%">
+                  <swiper-item>
+                    <image bindtap='previewImage' class="image1" src="../../images/封1.jpg" data-src="../../images/封1.jpg"></image>
+                  </swiper-item>
+                  <swiper-item>
+                    <image bindtap='previewImage' class="image2" src="../../images/封2.jpg"></image>
+                  </swiper-item>
+                  <!-- <swiper-item>
+                    <image class="image3" src="../../images/4.jpg"></image>
+                  </swiper-item> -->
+      </swiper>
     </view>
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>Horizontal Scroll\n横向滚动</text>
+    <view class="page-section-button">
+      <view class="link_child" catchtap='toURLa'> 
+        <image class="link_image" src='../../images/门类安装.png'></image>
+        <view class="section__title">实木复合</view>
       </view>
-      <view class="page-section-spacing">
-        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
-          <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
-          <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
-        </scroll-view>
+      <view class="link_child" catchtap='toURLb'> 
+        <image class="link_image" src='../../images/生态.png'></image>
+        <view class="section__title">生态门</view>
+      </view>
+     <view class="link_child" catchtap="toURLc">
+         <image class="link_image" src='../../images/m3.png'></image>
+         <view class="section__title">CPL干性漆门</view>
       </view>
     </view>
   </view>
