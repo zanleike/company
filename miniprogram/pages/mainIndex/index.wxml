@@ -5,10 +5,10 @@
               vertical="{{false}}" interval="2000" duration="500" previous-margin="0"
               next-margin="0" style="height: 100%">
                   <swiper-item>
-                    <image bindtap='previewImage' class="image1" src="../../images/封1.jpg" data-src="../../images/封1.jpg"></image>
+                    <image bindtap='previewImage' class="image1" src="../../images/f1.jpg" data-src="../../images/封1.jpg"></image>
                   </swiper-item>
                   <swiper-item>
-                    <image bindtap='previewImage' class="image2" src="../../images/封2.jpg"></image>
+                    <image bindtap='previewImage' class="image2" src="../../images/f2.jpg"></image>
                   </swiper-item>
                   <!-- <swiper-item>
                     <image class="image3" src="../../images/4.jpg"></image>
@@ -17,15 +17,21 @@
     </view>
     <view class="page-section-button">
       <view class="link_child" catchtap='toURLa'> 
-        <image class="link_image" src='../../images/门类安装.png'></image>
+        <view class="link_view">
+        <image class="link_image" src='../../images/m4.png'></image>
+        </view>
         <view class="section__title">实木复合</view>
       </view>
       <view class="link_child" catchtap='toURLb'> 
-        <image class="link_image" src='../../images/生态.png'></image>
+        <view class="link_view">
+        <image class="link_image" src='../../images/m5.png'></image>
+        </view>
         <view class="section__title">生态门</view>
       </view>
      <view class="link_child" catchtap="toURLc">
+         <view class="link_view">
          <image class="link_image" src='../../images/m3.png'></image>
+         </view>
          <view class="section__title">CPL干性漆门</view>
       </view>
     </view>
